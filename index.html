@@ -1,136 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>PL Espião</title>
+        <style type="text/css">
+            /* http://meyerweb.com/eric/tools/css/reset/ 
+               v2.0 | 20110126
+               License: none (public domain)
+            */
+            
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+            	margin: 0;
+            	padding: 0;
+            	border: 0;
+            	font-size: 100%;
+            	font: inherit;
+            	vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+            	display: block;
+            }
+            body {
+            	line-height: 1;
+            }
+            ol, ul {
+            	list-style: none;
+            }
+            blockquote, q {
+            	quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+            	content: '';
+            	content: none;
+            }
+            table {
+            	border-collapse: collapse;
+            	border-spacing: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe id="content" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+        <script type="text/javascript">
+        /*!
+ * enquire.js v2.1.2 - Awesome Media Queries in JavaScript
+ * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/enquire.js
+ * License: MIT (http://www.opensource.org/licenses/mit-license.php)
+ */
 
-	<head>
-		<meta charset="utf-8">
+!function(a,b,c){var d=window.matchMedia;"undefined"!=typeof module&&module.exports?module.exports=c(d):"function"==typeof define&&define.amd?define(function(){return b[a]=c(d)}):b[a]=c(d)}("enquire",this,function(a){"use strict";function b(a,b){var c,d=0,e=a.length;for(d;e>d&&(c=b(a[d],d),c!==!1);d++);}function c(a){return"[object Array]"===Object.prototype.toString.apply(a)}function d(a){return"function"==typeof a}function e(a){this.options=a,!a.deferSetup&&this.setup()}function f(b,c){this.query=b,this.isUnconditional=c,this.handlers=[],this.mql=a(b);var d=this;this.listener=function(a){d.mql=a,d.assess()},this.mql.addListener(this.listener)}function g(){if(!a)throw new Error("matchMedia not present, legacy browsers require a polyfill");this.queries={},this.browserIsIncapable=!a("only all").matches}return e.prototype={setup:function(){this.options.setup&&this.options.setup(),this.initialised=!0},on:function(){!this.initialised&&this.setup(),this.options.match&&this.options.match()},off:function(){this.options.unmatch&&this.options.unmatch()},destroy:function(){this.options.destroy?this.options.destroy():this.off()},equals:function(a){return this.options===a||this.options.match===a}},f.prototype={addHandler:function(a){var b=new e(a);this.handlers.push(b),this.matches()&&b.on()},removeHandler:function(a){var c=this.handlers;b(c,function(b,d){return b.equals(a)?(b.destroy(),!c.splice(d,1)):void 0})},matches:function(){return this.mql.matches||this.isUnconditional},clear:function(){b(this.handlers,function(a){a.destroy()}),this.mql.removeListener(this.listener),this.handlers.length=0},assess:function(){var a=this.matches()?"on":"off";b(this.handlers,function(b){b[a]()})}},g.prototype={register:function(a,e,g){var h=this.queries,i=g&&this.browserIsIncapable;return h[a]||(h[a]=new f(a,i)),d(e)&&(e={match:e}),c(e)||(e=[e]),b(e,function(b){d(b)&&(b={match:b}),h[a].addHandler(b)}),this},unregister:function(a,b){var c=this.queries[a];return c&&(b?c.removeHandler(b):(c.clear(),delete this.queries[a])),this}},new g});
 
-		<title>PL Espião</title>
+/* global enquire */
+var url = '';
+var $iframe = document.getElementById('content');
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div data-background-transition="fade" data-transition-speed="default" role="application" class="reveal slide center has-parallax-background">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section data-background="img/homebkg.jpg">
-					
-					<p class="fragment fade-out">
-						PL Espião é o apelido dado ao Projeto de Lei 215/2015, que hoje,   dezembro/15, está pronto para ser votado na Câmara dos Deputados do Brasil. 						</small>
-					</p>
-					<p class="fragment fade-out"> 
-						Caso aprovado:
-					</p>
-					<ol class="fragment fade-out">
-						<li>
-							1) políticos eleitos poderão remover conteúdo sobre si mesmo da internet sem decisão judicial
-						</li>
-						<li>
-							2) governo e polícia acessariam livremente seus dados pessoais, inclusive email e chats; 
-						</li>
-					</ol>
-						<p class="fragment fade-out"> 
-							Pois é, gente..
-						</p>
-
-				</section>
-				<section data-background="img/homebkg.jpg">
-					<p class="fragment fade-out fade-in">
-						Talvez o maior ataque às liberdades individuais desde nossa última ditadura, passando sem debate público.
-					</p>
-					<p class="fragment fade-in fade-out"> 
-						Fizemos este site para entender da onde veio esse absurdo e onde ele pode parar, para o bem ou para o mal.					</p>
-
-				</section>
-				<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop>>
-				</section>
-			
-				<section data-background="img/esquecimentobkg.jpg">
-					<p class="fragment fade-out fade-in">
-						Hoje, a Europa está debatendo o direito ao  esquecimento,  que seria um cidadão remover dos mecanismos de busca  conteúdo que lhe  seja prejudicial, como vídeos de sexo ou outros  equívocos.
-					</p>
-					<p class="fragment fade-in fade-out"> 
-						Mas apenas de civis. Políticos e pessoas públicas estão fora dessa regra.
-					</p>
-					<p class="fragment fade-in fade-out">
-						Nosso   PL Espião, porém, propõe que "autoridades competentes", seja quais   forem, possam remover da rede conteúdo que considerem prejudicial à sua   honra. 
-					</p>
-				</section>
-				<section data-background="img/esquecimentobkg.jpg">
-					<p class="fragment fade-out fade-in">
-						Ou seja, Fernando Collor, Eduardo Cunha, Geraldo Alckmin, Lula e todos os seus colegas poderiam excluir o histórico de cobertura prejudicial à  sua  honra.					</p>
-					<p class="fragment fade-in fade-out"> 
-						Sem decisão judicial.					</p>
-					<p class="fragment fade-in fade-out">
-						Estariam, assim, reescrevendo a história.					</p>
-					<p class="fragment fade-in fade-out">
-						Uma grande fogueira digital de livros.			</p>
-
-
-
-
-				</section>
-			
-			</div>
-		</div>
-
-<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'fade', // none/fade/slide/convex/concave/zoom
-
-					
-				
-				
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-	</body>
-</html>		
+enquire.register("screen and (min-device-width: 320px) and (max-device-width: 768px)", {
+    match : function() {
+        url = './mobile/index.html';
+        $iframe.src = url;
+    }
+});
+enquire.register("screen and (min-device-width: 769px) and (max-device-width: 20000px)", {
+    match : function() {
+        url = './desktop/index.html';
+        $iframe.src = url;
+    }
+});
+        </script>
+    </body>
+</html>
