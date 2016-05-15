@@ -173,7 +173,7 @@ body {
 
 .screen-tracker {
   position: fixed;
-  top: 50%;
+  top: 5%;
   right: 25px;
   width: 10px;
   z-index: 6;

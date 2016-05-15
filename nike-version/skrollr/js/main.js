@@ -30,7 +30,7 @@ $(document).ready(function() {
     $('body').css('visibility', 'visible');
 
     var firstSection = 0;
-    var lastSection = 4;
+    var lastSection = 25;
     var currentSection = 0;
     var scrollingBeHappening = false;
     var windowHeight = $(window).height();
@@ -108,7 +108,7 @@ $(document).ready(function() {
         animatedScrollTo("#content-container-0");
         currentSection = 0;
     });
-    $('#tracker-node-1').click(function() {
+		$('#tracker-node-1').click(function() {
         animatedScrollTo("#content-container-1");
         currentSection = 1;
     });
@@ -120,10 +120,99 @@ $(document).ready(function() {
         animatedScrollTo("#content-container-3");
         currentSection = 3;
     });
-    $('#tracker-node-4').click(function() {
+		$('#tracker-node-4').click(function() {
         animatedScrollTo("#content-container-4");
         currentSection = 4;
     });
+		$('#tracker-node-4').click(function() {
+        animatedScrollTo("#content-container-5");
+        currentSection = 5;
+    });
+
+		$('#tracker-node-6').click(function() {
+				animatedScrollTo("#content-container-6");
+				currentSection = 6;
+		});
+		$('#tracker-node-7').click(function() {
+				animatedScrollTo("#content-container-7");
+				currentSection = 7;
+		});
+		$('#tracker-node-8').click(function() {
+				animatedScrollTo("#content-container-8");
+				currentSection = 8;
+		});
+		$('#tracker-node-9').click(function() {
+				animatedScrollTo("#content-container-9");
+				currentSection = 9;
+		});
+		$('#tracker-node-10').click(function() {
+				animatedScrollTo("#content-container-10");
+				currentSection = 10;
+		});
+
+
+		$('#tracker-node-11').click(function() {
+        animatedScrollTo("#content-container-11");
+        currentSection = 11;
+    });
+    $('#tracker-node-12').click(function() {
+        animatedScrollTo("#content-container-12");
+        currentSection = 12;
+    });
+    $('#tracker-node-13').click(function() {
+        animatedScrollTo("#content-container-13");
+        currentSection = 13;
+    });
+		$('#tracker-node-14').click(function() {
+        animatedScrollTo("#content-container-14");
+        currentSection = 14;
+    });
+		$('#tracker-node-15').click(function() {
+        animatedScrollTo("#content-container-15");
+        currentSection = 15;
+    });
+
+		$('#tracker-node-16').click(function() {
+				animatedScrollTo("#content-container-16");
+				currentSection = 16;
+		});
+		$('#tracker-node-17').click(function() {
+				animatedScrollTo("#content-container-17");
+				currentSection = 17;
+		});
+		$('#tracker-node-18').click(function() {
+				animatedScrollTo("#content-container-18");
+				currentSection = 18;
+		});
+		$('#tracker-node-19').click(function() {
+				animatedScrollTo("#content-container-19");
+				currentSection = 19;
+		});
+		$('#tracker-node-20').click(function() {
+				animatedScrollTo("#content-container-20");
+				currentSection = 20;
+		});
+
+		$('#tracker-node-21').click(function() {
+				animatedScrollTo("#content-container-21");
+				currentSection = 21;
+		});
+		$('#tracker-node-22').click(function() {
+				animatedScrollTo("#content-container-22");
+				currentSection = 22;
+		});
+		$('#tracker-node-23').click(function() {
+				animatedScrollTo("#content-container-23");
+				currentSection = 23;
+		});
+		$('#tracker-node-24').click(function() {
+				animatedScrollTo("#content-container-24");
+				currentSection = 24;
+		});
+		$('#tracker-node-25').click(function() {
+				animatedScrollTo("#content-container-25");
+				currentSection = 25;
+		});
     $(window).resize(function() {
         windowHeight = $(window).height();
         $('.content-container').height(windowHeight);
