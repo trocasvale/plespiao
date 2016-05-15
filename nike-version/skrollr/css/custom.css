@@ -1,6 +1,6 @@
 .screen-tracker {
   position: fixed;
-  top: 40px;
+  top: 60px;
   right: 25px;
   width: 20px;
   height: 700px;
@@ -46,6 +46,6 @@
   background-size: cover;
 }
 
-.home {
-  background-image: url(../img/bghome.jpg)
+.section-3 {
+  background-image: url(../img/bgesquecimento.jpg)
 }

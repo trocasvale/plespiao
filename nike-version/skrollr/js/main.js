@@ -225,5 +225,5 @@ skrollr.init({
 });
 
 $(document).ready(function() {
-  Tipped.create('.screen-tracker .node');
+  Tipped.create('.screen-tracker .node', { position: 'lefttop' });
 });
