@@ -1,0 +1,393 @@
+html,button,input,select,textarea {
+  color: #222;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@-webkit-keyframes scroll-down-animation {
+  0% {
+    bottom: 10px;
+  }
+
+  25% {
+    bottom: 18px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
+
+  100% {
+    bottom: 10px;
+  }
+}
+
+@-moz-keyframes scroll-down-animation {
+  0% {
+    bottom: 10px;
+  }
+
+  25% {
+    bottom: 18px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
+
+  100% {
+    bottom: 10px;
+  }
+}
+
+@-o-keyframes scroll-down-animation {
+  0% {
+    bottom: 10px;
+  }
+
+  25% {
+    bottom: 18px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
+
+  100% {
+    bottom: 10px;
+  }
+}
+
+@keyframes scroll-down-animation {
+  0% {
+    bottom: 10px;
+  }
+
+  25% {
+    bottom: 18px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
+
+  100% {
+    bottom: 10px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+  body {
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'Trocchi', sans-serif;
+  font-weight: 100;
+  height: 100%;
+  color: #fff;
+}
+
+html {
+  background: #eeeeee url(../img/bghome.jpg) no-repeat center center fixed;
+  /*background: -webkit-linear-gradient(top, #eeeeee, #cccccc 100%);
+  background: -moz-linear-gradient(top, #eeeeee, #cccccc 100%);
+  background: -o-linear-gradient(top, #eeeeee, #cccccc 100%);
+  background: -ms-linear-gradient(top, #eeeeee, #cccccc 100%);
+  background: linear-gradient(top, #eeeeee, #cccccc 100%);*/
+  background-attachment:fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(../img/bghome.jpg)
+}
+
+body {
+  visibility: hidden;
+}
+
+.scroll-down-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -38px;
+  cursor: pointer;
+  z-index: 2;
+  text-align: center;
+}
+
+.video-container {
+  position: absolute;
+  margin-top: 100px;
+  top: 12%;
+  left: 180px;
+}
+
+.content-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.p2 {
+  width: 35%;
+  position: absolute;
+  left: 10%;
+}
+
+.p4 {
+  width: 35%;
+  position: absolute;
+  left: 55%;
+}
+
+@media (min-width: 1300px) {
+  .p2 {
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -525px;
+  }
+
+  .p4 {
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: 25px;
+  }
+}
+
+.p2 .qrf {
+  position: absolute;
+  top: 409px;
+  left: 343px;
+}
+
+.content-container.fixed {
+  position: fixed;
+}
+
+#content-container-0 {
+  z-index: 7;
+}
+
+.footer {
+  position: absolute;
+  height: 380px;
+  bottom: 0px;
+  width: 100%;
+  background-color: #15131e;
+  padding-top: 40px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+/* ==========================================================================
+Footer social links
+========================================================================== */
+
+.share-icons a {
+  display: inline-block;
+}
+
+.share-icons a:hover {
+  text-decoration: none;
+}
+
+.share-icons span {
+  display: block;
+  width: 62px;
+  height: 68px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  transition: all 1.5s ease-out 0s;
+}
+
+.share-icons span:hover {
+  background-position: -436px 0px;
+}
+
+.share-icons .share-facebook {
+  background: url(../img/facebook.png) no-repeat;
+}
+
+.share-icons .share-twitter {
+  background: url(../img/twitter.png) no-repeat;
+}
+
+.share-icons .share-google {
+  background: url(../img/google.png) no-repeat;
+}
+
+.share-icons .share-youtube {
+  background: url(../img/youtube.png) no-repeat;
+}
+
+.share-block {
+  margin: 10px 0;
+  padding: 0 0 0 60px;
+  position: relative;
+  min-height: 40px;
+}
+
+.share-block span {
+  background: #ddd;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.share-block.second span {
+  background: #686662;
+}
+
+/* ==========================================================================
+Print styles
+========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+  * Don't show links for images, or javascript/internal links
+  */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
