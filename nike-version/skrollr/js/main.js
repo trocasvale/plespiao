@@ -1,3 +1,4 @@
+window.jQuery = $;
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -221,4 +222,8 @@ $(document).ready(function() {
 });
 skrollr.init({
     forceHeight: false
+});
+
+$(document).ready(function() {
+  Tipped.create('.screen-tracker .node');
 });

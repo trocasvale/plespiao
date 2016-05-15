@@ -171,55 +171,11 @@ body {
   text-align: center;
 }
 
-.screen-tracker {
-  position: fixed;
-  top: 5%;
-  right: 25px;
-  width: 10px;
-  z-index: 6;
-  margin-top: -30px;
-}
-
-.screen-tracker .node {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  width: 20px;
-  height: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  border: thin solid #fff;
-}
-
-.screen-tracker .node .active-node {
-  position: absolute;
-  border-radius: 20px;
-  width: 20px;
-  height: 20px;
-  background-color: #FFFFFF;
-}
-
 .video-container {
   position: absolute;
   margin-top: 100px;
   top: 12%;
   left: 180px;
-}
-
-.video-copy {
-  position: absolute;
-  left: 730px;
-  top: 12%;
-}
-
-.video-copy .faded {
-  position: absolute;
-}
-
-.video-copy .buyshare {
-  position: absolute;
-  top: 433px;
-  left: 250px;
 }
 
 .content-container {
